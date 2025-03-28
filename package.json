@@ -1,5 +1,5 @@
 {
-  "name": "fary-tales-project",
+  "name": "salmonineath-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.0.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
