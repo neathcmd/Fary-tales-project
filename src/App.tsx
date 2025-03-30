@@ -7,7 +7,9 @@ function App() {
   return (
     <ThemeProvider>
       <Navber />
-      <Home />
+      <main>
+        <Home />
+      </main>
     </ThemeProvider>
   );
 }
