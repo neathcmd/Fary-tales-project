@@ -16,7 +16,7 @@ const StoryViewer = () => {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const apiUrl = `http://62.72.46.248:1337/api/stories/${documentId}?populate=*`;
+  const apiUrl = `https://group1.psewmad.org/api/stories/${documentId}?populate=*`;
 
   useEffect(() => {
     setLoading(true);

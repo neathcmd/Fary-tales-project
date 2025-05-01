@@ -39,7 +39,7 @@ export default function Hero({ onSearchQueryChange }: HeroProps) {
       // Removed loading state update
       try {
         const response = await fetch(
-          "http://62.72.46.248:1337/api/story-types"
+          "https://group1.psewmad.org/api/story-types"
         );
         if (!response.ok) throw new Error(`API error: ${response.status}`);
         const data: StoryTypeResponse = await response.json();
@@ -95,6 +95,28 @@ export default function Hero({ onSearchQueryChange }: HeroProps) {
       )}
 
       {/* Story Types */}
+      <div className="p-4">
+        {storyTypes.length > 0 ? (
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {storyTypes.map((story) => (
+              <li
+                key={story.id}
+                className="bg-pink-100 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
+                <h3 className="text-lg font-bold text-pink-700">
+                  {story.name}
+                </h3>
+                {story.description && (
+                  <p className="text-sm text-pink-600">{story.description}</p>
+                )}
+                {story.emoji && <span className="text-2xl">{story.emoji}</span>}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-center text-pink-500">No stories available.</p>
+        )}
+      </div>
     </section>
   );
 }

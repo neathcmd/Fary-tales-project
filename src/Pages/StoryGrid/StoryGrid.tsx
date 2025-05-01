@@ -31,7 +31,7 @@ export default function Story() {
   const [selectedStoryType, setSelectedStoryType] = useState<string>("");
   const [selectedAgeRange, setSelectedAgeRange] = useState<string>("");
 
-  const Base_Url = "http://62.72.46.248:1337";
+  const Base_Url = "https://group1.psewmad.org";
 
   // Fetch all story types
   useEffect(() => {

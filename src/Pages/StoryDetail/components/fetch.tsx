@@ -6,7 +6,7 @@ const SearchComponent = () => {
 
   const fetchFilteredStories = () => {
     fetch(
-      `http://62.72.46.248:1337/api/stories?filters[title][$containsi]=${searchQuery}&populate=cover_image`
+      `https://group1.psewmad.org/api/stories?filters[title][$containsi]=${searchQuery}&populate=cover_image`
     )
       .then((response) => response.json())
       .then((data) => {

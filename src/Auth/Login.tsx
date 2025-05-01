@@ -99,16 +99,19 @@ export default function Login() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://62.72.46.248:1337/api/auth/local", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          identifier: formData.identifier,
-          password: formData.password,
-        }),
-      });
+      const response = await fetch(
+        "https://group1.psewmad.org/api/auth/local",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            identifier: formData.identifier,
+            password: formData.password,
+          }),
+        }
+      );
 
       const data = await response.json();
 

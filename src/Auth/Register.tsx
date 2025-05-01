@@ -119,7 +119,7 @@ export default function Register() {
 
     try {
       const response = await fetch(
-        "http://62.72.46.248:1337/api/auth/local/register",
+        "https://group1.psewmad.org/api/auth/local/register",
         {
           method: "POST",
           headers: {
